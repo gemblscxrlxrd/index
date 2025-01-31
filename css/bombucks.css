@@ -1,0 +1,219 @@
+/* This project was developed by @winlikesam (Telegram)*/
+
+
+.center-container > * {
+    max-width: 90%;
+    text-align: center;
+}
+
+.container {
+	text-align: center;
+	margin-top: 20px;
+}
+.game-board {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px auto;
+	min-height: 200px;
+	z-index: 1;
+}
+.row {
+	display: flex;
+	width: 100%;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: slideIn 0.5s forwards ease-out;
+}
+@keyframes slideIn {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.square {
+	margin: 2.7px;
+	background-color: #f0f0f0;
+	transition: all 0.3s;
+	background: linear-gradient(145deg, #1f1f1f, #2b2b2b);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	box-shadow: 0 0 7px 4px #555555;
+}
+.square.active {
+	background-color: #ff9a9e;
+	border-radius: 50%;
+}
+.play-button, .reset-button, .field-select-button index-button {
+	padding: 10px 20px;
+	font-size: 16px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.neon-circle {
+	width: 60%;
+	height: 45%;
+	z-index: 9999;
+	border-radius: 50% / 50%;
+	border: 4px solid white;
+	box-shadow:
+		0 0 30px rgba(0, 255, 153, 1),
+		0 0 60px rgba(0, 255, 204, 0.9),
+		0 0 90px rgba(0, 255, 204, 0.8),
+		0 0 120px rgba(0, 255, 204, 0.7);
+	animation: appear 1s ease forwards;
+	opacity: 0;
+	background-color: transparent;
+}
+
+.fs {
+ z-index: 000000;
+}
+
+
+.play-button {
+margin-bottom: 3px;
+}
+select {
+padding: 10px 10px;
+font-size: 18px;
+background-color: #1f1f1f;
+color: white;
+border: none;
+border-radius: 10px;
+margin: 10px 0;
+cursor: pointer;
+transition: background-color 0.3s ease;
+width: 100%;
+box-sizing: border-box;
+}
+select:hover {
+background-color: #008B8B;
+}
+label {
+font-family: 'Intro', Arial, sans-serif;
+font-size: 18px;
+}
+
+.tab {
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #333;
+	padding: 10px 0;
+	border-radius: 50px;
+	height: 70px;
+}
+
+.tab button {
+	background-color: inherit;
+	flex: 1 0 auto;
+	margin: 0 10px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 20px;
+	transition: 0.3s;
+	color: #fff;
+	text-align: center;
+	border-radius: 50px;
+	font-size: 16px;
+	font-family: 'Intro', Arial, sans-serif;
+}
+
+.tab button img {
+	max-width: 38px;
+	height: 38px;
+}
+
+.tab button:hover {
+	background-color: #555;
+	transform: translateY(-2px);
+}
+
+.tab button.active {
+	background-color: #666;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+	.tab {
+		height: 70px;
+	}
+
+	.tab button {
+		margin: 0 5px;
+		padding: 10px 15px;
+		font-size: 14px;
+	}
+
+	.tab button img {
+		max-width: 32px;
+		height: 32px;
+	}
+}
+
+@media (max-width: 480px) {
+	.tab {
+		height: 70px;
+	}
+
+
+	.tab button {
+		margin: 0 3px;
+		padding: 8px 12px;
+		font-size: 12px;
+	}
+
+	.tab button img {
+		max-width: 28px;
+		height: 28px;
+	}
+}
+
+
+button, select, input, textarea, a {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-focus-ring-color: transparent;
+	outline: none;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+
+#notification {
+	display: none;
+	color: white;
+	background-color: #1b6c7f;
+	padding: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	text-align: center;
+	top: 55px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 80vw;
+	max-width: 600px;
+	animation: slideDown 0.5s ease forwards;
+}
+
+#notification.fade-out {
+	animation: slideUp 0.5s ease forwards;
+}
+
+#divsel {
+	z-index: 1;
+}
+/* This project was developed by @winlikesam (Telegram)*/

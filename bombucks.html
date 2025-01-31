@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- This project was developed by @winlikesam (Telegram) -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1>
+    <title>@CUSHEMP Bombucks</title>
+	<link href="css/general.css" rel="stylesheet">
+	<link href="css/bombucks.css" rel="stylesheet">
+    
+</head>
+<body>
+
+	<header>
+        <img src="assets/logo.png" alt="Logo">
+        <span>@CUSHEMP 1WIN BOT</span>
+		<img src="assets/logo.png" alt="Logo">
+    </header>
+
+    <div id="notification">
+        Пожалуйста, подождите 25 секунд перед следующим нажатием.
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="divsel">
+        <select id="fieldSelect">
+            <option value="6x15">6x15</option>
+            <option value="3x6">3x6</option>
+            <option value="2x3">2x3</option>
+            <option value="4x9">4x9</option>
+            <option value="5x12">5x12</option>
+        </select>
+    </div>
+    <div class="game-board" id="gameBoard"></div>
+		<button class="button green" id="play" style="margin-top: 50px;">ИГРАТЬ</button>
+		<button class="button green" id="reset">СБРОСИТЬ</button>
+		<button class="button green" onclick="location.href='index.html'" class="index-button">НАЗАД</button>
+	
+	</div>
+	
+	<canvas id="particleCanvas"></canvas>
+	
+	<script src="js/general.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="js/bombucks.js"></script>
+    <!-- This project was developed by @winlikesam (Telegram) -->
+
+</body>
+</html>

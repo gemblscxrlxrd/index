@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- This project was developed by @winlikesam (Telegram) -->
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@CUSHEMP Mines</title>
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/miny.css">
+</head>
+<body class="miny-page">
+    <header>
+        <img src="assets/logo.png" alt="Logo">
+        <span>@CUSHEMP 1WIN BOT</span>
+		<img src="assets/logo.png" alt="Logo">
+    </header>
+	
+	<canvas id="particleCanvas"></canvas>
+	
+	<div class="main-container">
+        <div class="container">
+            <div class="grid" id="grid"><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div></div>
+        </div>
+        <div id="counter-container">
+            <span id="count" class="count-display"></span>
+        </div>
+		<div class="button-container">
+			<button class="button green" id="btn1" onclick="showModal()">Получить сигнал</button>
+			<button class="button green" id="btn2" onclick="location.href='index.html'">Вернуться</button>
+		</div>
+    </div>
+	
+	<canvas id="particleCanvas"></canvas>
+
+    <audio id="sound-effect" src="assets/audio/star.mp3"></audio>
+    <audio id="ok-sound" src="assets/audio/ok.mp3"></audio>
+    <audio id="close-sound" src="assets/audio/close.mp3"></audio>
+	
+    <div id="modal">
+		<div class="close-button" onclick="closeModal()">×</div>
+		<iframe src="slider.html" frameborder="0" style="width:100%; height:100%"></iframe>
+	</div>
+
+	<script src="js/general.js"></script>
+	<script src="js/miny.js"></script>
+	<!-- This project was developed by @winlikesam (Telegram) -->
+	
+</body>
+</html>

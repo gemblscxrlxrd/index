@@ -1,0 +1,135 @@
+/* This project was developed by @winlikesam (Telegram)*/
+
+@font-face {
+	font-family: 'Intro';
+	src: url('../assets/font.otf') format('opentype');
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-image: url('../assets/lucky/background.jpg');
+	font-family: 'Intro', sans-serif;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	position: relative;
+}
+
+.title {
+	font-family: 'Intro', sans-serif;
+	font-size: 3rem;
+	color: white;
+	margin-bottom: 10px; /* Большой отступ после текста */
+}
+
+.circle {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	border: 13px solid purple;
+	border-radius: 50%;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	font-size: 4rem;
+	color: white;
+	margin: 20px 0;
+}
+
+.circle .counter-prefix {
+	font-family: sans-serif;
+}
+
+.circle .counter-number {
+	font-family: 'Intro', sans-serif;
+}
+
+.buttons {
+	font-family: 'Intro', sans-serif;
+	display: flex;
+	flex-direction: column;
+	gap: 15px; /* Отступ между кнопками */
+}
+
+.btn-signal {
+	font-family: 'Intro', sans-serif;
+	width: 150px;
+	font-size: 1rem;
+	border-radius: 50px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btn-signal:hover {
+	background-color: #0056b3;
+}
+
+#jet {
+	position: absolute;
+	top: 20%; /* Новая начальная позиция */
+	left: 0%; /* Новая начальная позиция */
+	width: 180px; /* Увеличен размер */
+	height: 180px; /* Увеличен размер */
+	background: url('../assets/lucky/1.gif') no-repeat;
+	background-size: contain;
+	animation: moveBackAndForth 12s ease-in-out infinite; /* Уменьшено время анимации */
+	z-index: 10; /* Установлен высокий z-index */
+}
+#sub-jet {
+	position: absolute;
+	top: 90px; /* Регулируйте значение по необходимости */
+	left: -96px; /* Сдвиг влево, корректируйте значение по необходимости */
+	width: 150px; /* Размер иконки 2.gif */
+	height: 150px; /* Размер иконки 2.gif */
+	background: url('../assets/lucky/2.gif') no-repeat;
+	background-size: contain;
+	z-index: 10; /* Установлен высокий z-index */
+}
+@keyframes moveBackAndForth {
+	0%, 100% { transform: translate(0, 0); }
+	30% { transform: translate(280px, 280px); } /* Регулируйте значения для изменения траектории */
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	padding: 0px 10px;
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	font-size: 20px;
+	justify-content: center;
+	font-family: 'Intro', sans-serif;
+}
+
+header img {
+	height: 45px;
+	width: 45px;
+}
+
+/* This project was developed by @winlikesam (Telegram)*/

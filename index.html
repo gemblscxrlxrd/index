@@ -1,0 +1,116 @@
+<!DOCTYPE html> <!-- This project was developed by @winlikesam (Telegram) -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>@CUSHEMP Menu</title>
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="index-page">
+    <header>
+        <img src="assets/logo.png" alt="Logo">
+        <span>@CUSHEMP 1WIN BOT</span>
+		<img src="assets/logo.png" alt="Logo">
+    </header>
+	
+	<canvas id="particleCanvas"></canvas>
+
+	<div id="Contact" class="tabcontent">
+		<div class="image-container">
+			<h2 class="title">GAME PICKER</h2>
+			<img src="assets/index/secret.png" alt="Secret Image">
+		</div>
+		<p id="device-output" class="device-info">УСТРОЙСТВО НЕ ОПРЕДЕЛЕНО</p>
+		<button onclick="detectDevice()" class="button detect-button yellow">ОПРЕДЕЛИТЬ УСТРОЙСТВО</button>
+		<button onclick="startGame()" class="button start-button yellow">НАЧАТЬ</button>
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<button class="close-button" onclick="closeModal()">&times;</button>
+				<h2 style="text-align: center;">ИНСТРУКЦИЯ</h2>
+				<div class="carousel">
+					<div class="slides" style="width: 200%; transition: transform 0.5s ease;">
+						<div class="slide" style="width: 50%; float: left;"><img src="assets/index/inst1.png" alt="Инструкция"></div>
+						<div class="slide" style="width: 50%; float: left;"><img src="assets/index/inst2.png" alt="Инструкция"></div>
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<div class="dots-container">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div id="miniModal" class="modal-mini">
+			<div class="modal-content-mini">
+				<button class="close-button-mini" onclick="closeMiniModal()">&times;</button>
+			</div>
+		</div>
+	</div>
+    <div id="Games" class="tabcontent" style="display: flex;">
+        <div class="row">
+           <div class="game">
+                <img src="assets/index/1.JPG" alt="Mines Preview">
+                <div class="game-info">
+                    <h3>Mines</h3>
+                    <button class="button yellow" onclick="openGame('mines')">ОТКРЫТЬ</button>
+                </div>
+            </div>
+            <div class="game">
+                <img src="assets/index/2.JPG" alt="Royal Mines Preview">
+                <div class="game-info">
+                    <h3>Royal Mines</h3>
+                    <button class="button yellow" onclick="openGame('royalMines')">ОТКРЫТЬ</button>
+                </div>
+            </div>
+			<!--
+            <div class="game">
+                <img src="assets/index/3.JPG" alt="CoinFlip Preview">
+                <div class="game-info">
+                    <h3>Coin Flip</h3>
+                    <button class="button yellow" onclick="openGame('coinFlip')">ОТКРЫТЬ</button>
+                </div>
+            </div>
+			-->
+            <div class="game">
+                <img src="assets/index/4.JPG" alt="BrawlPirates Preview">
+                <div class="game-info">
+                    <h3>Pirates</h3>
+                    <button class="button yellow" onclick="openGame('brawlPirates')">ОТКРЫТЬ</button>
+                </div>
+            </div>
+            <div class="game">
+                <img src="assets/index/5.JPG" alt="Bombucks Preview">
+                <div class="game-info">
+                    <h3>Bombucks</h3>
+                    <button class="button yellow" onclick="openGame('bomBucks')">ОТКРЫТЬ</button>
+                </div>
+            </div>
+            <div class="game">
+                <img src="assets/index/6.JPG" alt="Lucky JET Preview">
+                <div class="game-info">
+                    <h3>Lucky Jet</h3>
+                    <button class="button yellow" onclick="openGame('luckyJet')">ОТКРЫТЬ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab">
+		<button class="tablinks about-icon" data-tab="About" onclick="openTelegram()">
+			<img src="assets/tg.png" alt="О нас">
+		</button>
+		<button class="tablinks games-icon" data-tab="Games" onclick="openTab(event, 'Games', this)">
+			<img src="assets/index/game.png" alt="Игры">
+		</button>
+		<button class="tablinks contact-icon" data-tab="Contact" onclick="openTab(event, 'Contact', this)">
+			<img src="assets/index/sec.png" alt="Контакты">
+		</button>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/general.js"></script>
+	<script src="js/index.js"></script>
+	<!-- This project was developed by @winlikesam (Telegram) -->
+	
+</body>
+</html>

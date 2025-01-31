@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- This project was developed by @winlikesam (Telegram) -->
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>@CUSHEMP Skulls</title>
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/skulls.css">
+</head>
+<body class="skulls-page">
+
+	<header>
+        <img src="assets/logo.png" alt="Logo">
+        <span>@CUSHEMP 1WIN BOT</span>
+		<img src="assets/logo.png" alt="Logo">
+    </header>
+
+    <div class="container">
+        <img src="assets/skulls/1.png" alt="Череп 1" id="skull1">
+        <img src="assets/skulls/1.png" alt="Череп 2" id="skull2">
+        <img src="assets/skulls/1.png" alt="Череп 3" id="skull3">
+        <img src="assets/skulls/2.png" alt="Алмаз" id="diamond" class="diamond" style="display: none;">
+    </div>
+    <div class="button-container">
+		<button class="start-button" onclick="openModal()">НАЧАТЬ</button>
+		<button class="return-button" onclick="location.href='index.html'">ВЕРНУТЬСЯ</button>
+	</div>
+    <div id="modal">
+        <div class="modal-content">
+             <button class="close-button" onclick="closeModal()">✕</button>
+            <p class="hash-id-text">GAME HASH ID </p>
+            <input type="text" id="hashIdInput" placeholder="Введите hash id" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;Введите hash id&#39;">
+            <button class="modal-button" onclick="validateAndStartShuffle()">OK</button>
+        </div>
+    </div>
+    <div id="message"></div>
+    
+	<script src="js/skulls.js"></script>
+    <!-- This project was developed by @winlikesam (Telegram) -->
+
+</body>
+</html>

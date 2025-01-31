@@ -1,0 +1,164 @@
+/* This project was developed by @winlikesam (Telegram)*/
+
+.royal-page {
+	background-image: url("../assets/fon.png");
+	background-position: center;
+	background-size: 60vh;
+	background-repeat: no-repeat;
+	width: 100vh;
+	height: 100vh;
+}
+
+
+.container {
+	text-align: center;
+	margin-top: 20px;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+.game-board {
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 100%;
+	width: 306px;
+	margin: 18px auto;
+	padding: 9px;
+	border-radius: 10.8px;
+	background-color: #f0f0f0;
+	box-shadow: 0px 0px 20px 15px rgb(50 55 111 / 94%);
+	background: linear-gradient(3deg, #541586 0%, #66a6ff 50%, #541586 100%);
+	background-size: 200% 200%;
+	animation: gradientShift 8s ease-in-out infinite;
+	z-index: 1;
+}
+
+@keyframes gradientShift {
+	0%, 100% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes fadeInRow {
+	from {
+		opacity: 0;
+		transform: translateY(30px); /* Стартовая позиция немного ниже */
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.row {
+	display: flex;
+	width: 100%;
+	animation: fadeInRow 0.5s ease-out forwards; /* Применяем анимацию к каждой строке */
+}
+
+.square {
+	opacity: 0;
+	width: 45px;
+	height: 45px;
+	background-color: #00123a;
+	margin: 2.7px;
+	border-radius: 10.8px;
+	box-shadow: inset 0 0.9px 2.7px rgba(0, 0, 0, 0.2), 0 1.8px 3.6px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	animation: fadeInOpacity 0.5s forwards;
+}
+@keyframes fadeInOpacity {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+.square.active {
+	transform: scale(1.12) translateY(-2px); /* Эта трансформация теперь не конфликтует */
+	transition: transform 0.5s ease; /* Переход только для трансформации */
+	background-image: linear-gradient(to top left, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80%;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.square.dim {
+	opacity: 0.5; /* Затемнение неактивных квадратов */
+}
+.play-buttons-container {
+	display: flex;
+	justify-content: space-around;
+	width: 306px;
+	margin-top: 18px;
+}
+
+.square.active {
+	background-image: url('../assets/step.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.game-title {
+	font-size: 2.4em;
+	font-weight: bold;
+	margin-bottom: 18px;
+	text-align: center;
+	background: -webkit-linear-gradient(120deg, #66a3fc 0%, #664aff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: float 6s infinite ease-in-out, backgroundShift 10s infinite linear;
+}
+@keyframes float {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+
+.notification {
+	display: none;
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 20px;
+	border-radius: 15px;
+	background: #ffffff;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	z-index: 1000;
+	opacity: 0;
+	transition: opacity 0.5s, top 0.5s;
+}
+
+.notification-content {
+	text-align: center;
+}
+
+.notification-text {
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 20px;  /* Добавляем отступ до кнопки */
+}
+
+.notification button {
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 10px;
+	background-color: #66a6ff;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.notification button:hover {
+	background-color: #5591cc;
+}
+ 
+ /* This project was developed by @winlikesam (Telegram)*/

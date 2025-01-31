@@ -1,0 +1,159 @@
+/* This project was developed by @winlikesam (Telegram)*/
+
+@font-face {
+	font-family: 'Intro';
+	src: url('../assets/font.otf') format('opentype');
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	background: #000;
+	background-size: cover; /* Или попробуйте заменить на `contain` */
+	background-repeat: no-repeat; /* Убирает повторение */
+	background-position: center; /* Центрирует фон */
+	background-attachment: fixed; /* Оставляет фон на месте при прокрутке */
+	animation: Gradient 16s ease infinite;
+	font-family: 'Intro', Arial, sans-serif;
+	color: #fff;
+	
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	scroll-behavior: smooth;
+	overflow: hidden;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100vh;
+	padding: 0px 10px;
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	font-size: 20px;
+	justify-content: center;
+}
+
+header img {
+	height: 45px;
+	width: 45px;
+}
+
+canvas#particleCanvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+	font-size: 20px; /* Увеличенный размер шрифта */
+	font-weight: bold; /* Жирный шрифт */
+	color: white; /* Белый цвет текста */
+	text-align: center; /* Выравнивание текста по центру */
+	margin-top: 20px; /* Отступ сверху */
+
+	padding: 8px 25px; /* Увеличенный padding для большего текста и иконки */
+	font-family: 'Intro', sans-serif; /* Шрифт, используемый на странице */
+	background: linear-gradient(145deg, #e52d27 0%, #b31217 100%); /* Красный градиент */
+	border-radius: 25px; /* Скругление углов */
+	box-shadow: 0 6px #9f0f0f, 0 -6px #e52d27 inset; /* 3D эффект */
+	transition: all 0.2s ease; /* Плавная анимация */
+	display: inline-flex; /* Использование flex для внутреннего выравнивания */
+	align-items: center; /* Выравнивание элементов по центру */
+	cursor: pointer; /* Курсор в виде указателя */
+	letter-spacing: 0.1em;
+	position: relative;
+	z-index: 1;
+}
+.button:hover {
+	background: linear-gradient(145deg, #b31217 0%, #e52d27 100%);
+	box-shadow: 0 8px #9f0f0f, 0 -6px #e52d27 inset;
+	transform: translateY(-3px);
+}
+.button:active {
+	box-shadow: 0 3px #9f0f0f, 0 -3px #e52d27 inset;
+	transform: translateY(2px);
+}
+
+.button-container {
+	display: flex;
+	justify-content: center; /* Центрирование содержимого по горизонтали */
+	align-items: center; /* Выравнивание содержимого по вертикали, если необходимо */
+	flex-direction: column; /* Стек элементов вертикально */
+	margin-top: 40px;
+	width: 100%; /* Занимает всю ширину родителя */
+}
+
+.green {
+	background: linear-gradient(145deg, #163b40 0%, #006363 100%); /* Красный градиент */
+	box-shadow: 0 6px #002c2c, 0 -6px #006363 inset; /* 3D эффект */
+}
+
+.green:hover {
+	background: linear-gradient(145deg, #163b40 0%, #006363 100%);
+	box-shadow: 0 8px #002c2c, 0 -6px #006363 inset;
+}
+
+.green:active {
+	box-shadow: 0 3px #002c2c, 0 -3px #006363 inset;
+}
+
+.blue {
+	background: linear-gradient(145deg, #667fdc 0%, #2b3464 100%); /* Красный градиент */
+	box-shadow: 0 6px #101d42, 0 -6px #203162 inset; /* 3D эффект */
+}
+
+.blue:hover {
+	background: linear-gradient(145deg, #667fdc 0%, #2b3464 100%);
+	box-shadow: 0 8px #101d42, 0 -6px #203162 inset;
+}
+
+.blue:active {
+	box-shadow: 0 3px #101d42, 0 -6px #203162 inset;
+}
+
+.yellow {
+	background: linear-gradient(145deg, #382100 0%, #ffce00 100%); /* Красный градиент */
+	box-shadow: 0 6px #151100, 0 -6px #7e6b00 inset; /* 3D эффект */
+}
+
+.yellow:hover {
+	background: linear-gradient(145deg, #382100 0%, #ffce00 100%);
+	box-shadow: 0 8px #151100, 0 -6px #7e6b00 inset;
+}
+
+.yellow:active {
+	box-shadow: 0 3px #151100, 0 -6px #7e6b00 inset;
+}
+
+/* This project was developed by @winlikesam (Telegram)*/
